@@ -34,10 +34,8 @@ class Note:
         }
 
     def __str__(self):
-        if self.pitch in self.pitch_map:
-            return '{}-'.format(self.pitch_map[self.pitch])*self.duration
-        else:
-            return '-'
+        note_char = self.pitch_map[self.pitch]
+        return '{}-'.format(note_char) * self.duration
 
 
 class Dir(Enum):
@@ -136,9 +134,9 @@ if __name__ == '__main__':
     direction = starting_dir
     generated_str = lsystem.generation[-1]
 
-    movement = {'F', 'A', 'B'}
+    movement_chars = {'F', 'A', 'B'}
     for character in generated_str:
-        if character in movement:
+        if character in movement_chars:
 
             # Records the duration and pitch of the tones based on the turtle movements
             if direction == Dir.LEFT or direction == Dir.RIGHT:
@@ -152,11 +150,11 @@ if __name__ == '__main__':
 
         elif character == '+' or character == '-':
             if (direction == Dir.LEFT or direction == Dir.RIGHT) and current_duration:
-
                 # Pops out the previous tone if the pitches match.
                 # This is to keep the current pitch duration accurate.
-                if notes and notes[-1].pitch == current_pitch and (notes[-1].duration == current_duration - 1 or
-                                                                   notes[-1].duration == current_duration):
+                if notes and notes[-1].pitch == current_pitch and \
+                        (notes[-1].duration == current_duration - 1 or
+                         notes[-1].duration == current_duration):
                     notes.pop()
                 notes.append(Note(current_pitch, current_duration))
 
@@ -169,9 +167,9 @@ if __name__ == '__main__':
     for note in notes:
         music_str += str(note)
 
-    samplerate = 44100
-
     print('Saving the music files...')
+
+    samplerate = 44100
 
     try:
         data = mathematics_of_music.get_song_data(music_str, duration=0.5)
