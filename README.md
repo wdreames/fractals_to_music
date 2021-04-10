@@ -4,7 +4,7 @@ This is a Python script used to convert fractal patterns into music through the 
 
 The following repositories were used during the creation of this program:
 - https://github.com/Mizzlr/L-Systems-Compiler-And-Renderer was used to create the L-systems and iterate over a given pattern (lsystem.py).
-- https://github.com/weeping-angel/Mathematics-of-Music was used to generate music/sound (mathematics_of_music).
+- https://github.com/weeping-angel/Mathematics-of-Music was used to generate music/sound (mathematics_of_music.py).
 
 ## Usage
 1. Create a virtual environment
