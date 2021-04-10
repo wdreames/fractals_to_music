@@ -9,7 +9,7 @@ The following repositories were used during the creation of this program:
 ## Usage
 1. Create a virtual environment
 
-`# virtualenv --no-site-packages env`
+`# virtualenv env`
 
 2. Activate the environment
 
