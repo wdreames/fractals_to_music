@@ -1,6 +1,6 @@
 # fractals_to_music
 
-This is a Python script used to convert fractal patterns into music through the use of L-systems. This was made as part of a project in Christopher Newport University's HONR 379: Fractals and Infinity course taught by Dr. Morena. See [Making Melodious Music From Fractals](Making\ Melodious\ Music\ From\ Fractals.pdf) for more details.
+This is a Python script used to convert fractal patterns into music through the use of L-systems. This was made as part of a project in Christopher Newport University's HONR 379: Fractals and Infinity course taught by Dr. Morena. See [Making Melodious Music From Fractals](Making%20Melodious%20Music%20From%20Fractals.pdf) for more details.
 
 The following repositories were used during the creation of this program:
 - https://github.com/Mizzlr/L-Systems-Compiler-And-Renderer was used to create the L-systems and iterate over a given pattern (lsystem.py).
