@@ -20,7 +20,7 @@ class Note:
             Integer value representing the duration of the note
         """
         # Uses mod 7 to allow for an infinite range of pitches
-        # This does unfortunately meant though that the outputted music will be less accurate.
+        # This does unfortunately mean though that the outputted music will be less accurate.
         self.pitch = pitch % 7
         self.duration = duration
         self.pitch_map = {
